@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JokeApp</string>
+    <string name="text_welcome">Welcome to Joke App!</string>
+    <string name="text_get_joke">Get joke</string>
+    <string name="text_error">Error</string>
+    <string name="intent_joke">joke intent</string>
+</resources>

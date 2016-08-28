@@ -9,8 +9,7 @@ package com.example.jtlie.myapplication.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-
-import java.util.Random;
+import com.liewjuntung.joke_library.JokeProvider;
 
 /**
  * An endpoint class we are exposing
@@ -30,9 +29,7 @@ public class MyEndpoint {
      */
     @ApiMethod(name = "joke")
     public JokeResponse joke() {
-        Random random = new Random();
-        String joke = Jokes.jokeList[random.nextInt(Jokes.jokeList.length)];
-        return new JokeResponse(joke);
+        return new JokeResponse(JokeProvider.getRandomJokes());
     }
 
 }
